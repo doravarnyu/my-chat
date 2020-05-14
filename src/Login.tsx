@@ -22,7 +22,7 @@ export class Login extends Component
             <TextInput type="password" placeholder="Password" value={ this.state.password } 
                 onChange={ e => this.setState( { password: e } ) } onEnter={ () => this.onClick() } />
             { this.state.register &&
-                <TextInput type="text" placeholder="Display Name (Agent Smith)" value={ this.state.displayName }
+                <TextInput type="text" placeholder="Display Name (Agent Smith)" value={ this.state.displayName } key={ this.state.displayName }
                     onChange={ e => this.setState( { displayName: e } ) } onEnter={ () => this.onClick() } />
             }
             <button type="button" onClick={ () => this.onClick() }>
